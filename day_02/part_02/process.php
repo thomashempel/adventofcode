@@ -3,7 +3,7 @@ const H_POS = 'h';
 const DEPTH = 'd';
 const AIM = 'a';
 
-$input = file('../input.txt');
+$input = file($argv[1]);
 $inputSize = count($input);
 
 $pos = [H_POS => 0, DEPTH => 0, AIM => 0];

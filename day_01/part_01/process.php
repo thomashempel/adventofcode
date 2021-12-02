@@ -1,5 +1,6 @@
 <?php
-$input = file('input.txt');
+$input = file($argv[1]);
+
 $result = 0;
 $last = PHP_INT_MAX;
 
