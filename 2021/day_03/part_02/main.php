@@ -32,18 +32,16 @@ function extractLine(array $data, int $line_size, bool $common = true): string
             $keep = $common ? '1' : '0';
         }
 
-        $new = [];
-        foreach ($remaining as $line) {
-            if ($line[$bit_index] == $keep) {
-                $new[] = $line;
-            }
-        }
+        $remaining = array_filter(
+            $remaining,
+            fn ($line) => ($line[$bit_index] == $keep)
+        );
 
-        $remaining = $new;
         $bit_index++;
+
     } while (count($remaining) > 1);
 
-    return $remaining[0];
+    return  array_pop($remaining);
 }
 
 $oxygen_generator_rating = extractLine($input, $line_size, true);
