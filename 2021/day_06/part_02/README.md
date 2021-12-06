@@ -6,7 +6,7 @@ After 256 days in the example above, there would be a total of 26984457539 lante
 
 How many lanternfish would there be after 256 days?
 
-See solution for day 1
+**The solution for this, is the same as for part 01!**
 
 Call it with
 
