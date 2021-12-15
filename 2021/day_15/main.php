@@ -40,11 +40,6 @@ class Day15
         return array_pop($nodes)->getTotalScore();
     }
 
-    public function part1()
-    {
-        echo 'Part 1: ' . $this->astar() . "\n\n";
-    }
-
     protected function printMap($map)
     {
         for ($y = 0; $y < count($map); $y++) {
@@ -55,11 +50,16 @@ class Day15
         }
     }
 
+    public function part1()
+    {
+        echo 'Part 1: ' . $this->astar() . "\n\n";
+    }
+
     public function part2()
     {
         $largeMap = array_fill(0, $this->h * 5, array_fill(0, $this->w * 5, 0));
 
-
+        // fill large map
         for ($y = 0; $y < $this->h; $y++) {
             for ($x = 0; $x < $this->w; $x++) {
                 $oValue = $this->map[$y][$x];
@@ -96,5 +96,5 @@ class Day15
 }
 
 $day14 = new Day15($argv[1]);
-// $day14->part1();
+$day14->part1();
 $day14->part2();
