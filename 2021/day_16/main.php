@@ -1,7 +1,7 @@
 <?php
 class Day16
 {
-    protected $inpout = '';
+    protected $input = '';
 
     const HEX_MAP = [
         '0' => '0000',
@@ -29,7 +29,7 @@ class Day16
     }
 
     /**
-     * We do the convertion ourself, since base_convert works
+     * We do the conversion ourself, since base_convert works
      * with numbers and therefore strips leading zeros. But we
      * need those.
      */
